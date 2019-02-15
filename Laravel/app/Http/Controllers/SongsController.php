@@ -46,10 +46,16 @@ class SongsController extends Controller
             'genre' => 'required'
         ]);
 
+        $link = $request->input('link');
+        $link = parse_url($link, PHP_URL_QUERY);
+        parse_str($link, $url_params);
+
+        // dd($url_params);
+
         $song = new Song;
         $song->name = $request->input('name');
         $song->author = $request->input('author');
-        $song->link = $request->input('link');
+        $song->link = $url_params['v'];
         $song->genre = $request->input('genre');
         $song->created_at = now();
         $song->save();
@@ -67,6 +73,15 @@ class SongsController extends Controller
     public function show($id)
     {
         $song = Song::find($id);
+        $curretView = $song->views;
+        $curretView++;
+        // dd($curretView);
+        $query = '
+        update songList
+        set `views` = ?
+        where id = ?;
+        ';
+        DB::update($query, [ $curretView, $id ]);
         return view('pages/expand')->with('song', $song);
     }
 
@@ -123,5 +138,10 @@ class SongsController extends Controller
         $song = Song::find($id);
         $song->delete();
         return redirect('/songs')->with('success', 'Post Removed');;
+    }
+
+    public function viewsIncerase ()
+    {
+        $song->views ++;
     }
 }

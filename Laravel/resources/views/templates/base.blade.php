@@ -13,10 +13,10 @@
     </head>
     <body>
         @include('components.nav')
-            <div class="container mt-5">
-                @include('components/error')
-            </div>
         <div class="jumbotron">
+                <div class="container mt-5">
+                    @include('components/error')
+                </div>
             @yield('content')
         </div> 
         @include('components.footer')
