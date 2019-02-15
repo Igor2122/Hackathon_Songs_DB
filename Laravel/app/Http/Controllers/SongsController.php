@@ -54,7 +54,7 @@ class SongsController extends Controller
         $song->created_at = now();
         $song->save();
 
-        return redirect('/')->with('success', 'Song Created');
+        return redirect()->action('SongsController@index')->with('success', 'Song Created');
 
     }
 
