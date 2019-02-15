@@ -13,7 +13,9 @@
         </ul>
         <div class="card-body">
           <p class="class-text"><b>Genre :</b>  <a href="#" class="card-link">{{ $song->genre }}</a></p>
-          
+          <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary">Left</button>
+                <button type="button" class="btn btn-secondary">Middle</button>
         </div>
       </div>
 
