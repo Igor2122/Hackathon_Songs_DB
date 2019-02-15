@@ -12,10 +12,11 @@
 
     </head>
     <body>
-
-    <div class="conter">
+    @include('components.nav')
+    <div class="conteiner">
         @yield('content')
     </div>
+    @include('components.footer')
 
 
 
