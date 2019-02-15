@@ -13,7 +13,7 @@
     </head>
     <body>
     @include('components.nav')
-    <div class="jumbotron flex-column justify-content-center d-flex">
+    <div class="jumbotron">
         {{-- <div class="container"> --}}
           <h1 class="display-3">Watch it!</h1>
           @yield('content')
