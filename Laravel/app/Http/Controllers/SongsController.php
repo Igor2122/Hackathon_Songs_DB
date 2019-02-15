@@ -14,7 +14,9 @@ class SongsController extends Controller
      */
     public function index()
     {
-        return view('pages.index');
+        $query = 'select * from songList';
+        $allSongs = DB::select($query);
+        return view('pages.index')->with('data', $allSongs);
     }
 
     /**
