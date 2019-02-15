@@ -1,6 +1,6 @@
 @php
     $nav_links = [
-      'Home' => '/',
+      'Home' => '/songs',
       'Create New' => action('SongsController@create')
     ];
 @endphp
