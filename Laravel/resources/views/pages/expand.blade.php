@@ -15,8 +15,9 @@
           <p class="class-text"><b>Genre :</b>  <a href="#" class="card-link">{{ $song->genre }}</a></p>
           <div class="btn-group" role="group" aria-label="Basic example">
                 <a href="/songs/edit/{{$song->id}} "><button type="button" class="btn btn-primary">Edit</button></a>
-                {{-- <a href="#"><button type="button" class="btn btn-secondary">Middle</button></a> --}}
+                <a href="/songs/delete/{{$song->id}}"><button type="button" class="btn btn-danger">Delete</button></a>
         </div>
+      </div>
       </div>
 
 

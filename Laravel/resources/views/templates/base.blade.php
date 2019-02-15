@@ -13,6 +13,9 @@
     </head>
     <body>
         @include('components.nav')
+            <div class="container mt-5">
+                @include('components/error')
+            </div>
         <div class="jumbotron">
             @yield('content')
         </div> 

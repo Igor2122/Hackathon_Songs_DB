@@ -109,7 +109,7 @@ class SongsController extends Controller
         $song->genre = $request->input('genre');
         $song->created_at = now();
         $song->save();
-        return view('pages/expand')->with('song', $song);
+        return view('pages/expand')->with('song', $song)->with('success', 'Song Updated');
     }
 
     /**
@@ -120,6 +120,8 @@ class SongsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $song = Song::find($id);
+        $song->delete();
+        return redirect('/songs')->with('success', 'Post Removed');;
     }
 }

@@ -15,6 +15,7 @@
 Route::resource('/songs', 'SongsController');
 Route::get('/songs/edit/{id}', 'SongsController@edit');
 Route::get('/songs/update/{id}', 'SongsController@update');
+Route::get('/songs/delete/{id}', 'SongsController@destroy');
 
 
 
