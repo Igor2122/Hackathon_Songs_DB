@@ -66,7 +66,8 @@ class SongsController extends Controller
      */
     public function show($id)
     {
-        //
+        $song = Song::find($id);
+        return view('pages/expand')->with('song', $song);
     }
 
     /**

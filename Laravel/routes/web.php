@@ -13,6 +13,9 @@
 
 
 Route::resource('/', 'SongsController');
+Route::get('/{id}', 'SongsController@show')->where('id', '\d+');
+
+
 
 
 
