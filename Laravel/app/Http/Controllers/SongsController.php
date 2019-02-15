@@ -78,7 +78,11 @@ class SongsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $song = Song::find($id);
+        if (!$song){
+            $song = new Song;
+        }
+        return view('posts/editsong')->with('song', $song);
     }
 
     /**
