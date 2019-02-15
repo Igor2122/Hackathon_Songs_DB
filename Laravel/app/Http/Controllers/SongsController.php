@@ -82,7 +82,7 @@ class SongsController extends Controller
         if (!$song){
             $song = new Song;
         }
-        return view('posts/editsong')->with('song', $song);
+        return view('posts/editsong')->with('songid', $song);
     }
 
     /**
