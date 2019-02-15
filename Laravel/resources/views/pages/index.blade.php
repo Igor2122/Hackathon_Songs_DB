@@ -6,7 +6,7 @@
             var_dump($data);
         @endphp --}}
     @foreach ($data as $song)
-    <div class="card d-flex flex-wrap" style="width: 560px;">
+    <div class="card d-flex flex-wrap d-lg-inline-block m-2" style="width: 560px;">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/{!! $song->link !!}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="card-body">
           <h5 class="card-title"><strong>{{ $song->author }}</strong>  -  {{ $song->name }}</h5>
