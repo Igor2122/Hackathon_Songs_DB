@@ -14,11 +14,11 @@
     <body>
     @include('components.nav')
     <div class="jumbotron">
-        <div class="container">
-          <h1 class="display-3">Hello, world!</h1>
+        {{-- <div class="container"> --}}
+          <h1 class="display-3">Watch it!</h1>
           @yield('content')
         </div>
-      </div>
+      {{-- </div> --}}
     
     @include('components.footer')
 
