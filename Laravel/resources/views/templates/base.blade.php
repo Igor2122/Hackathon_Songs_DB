@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+      <title> @yield('title')</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
@@ -12,19 +12,10 @@
 
     </head>
     <body>
-    @include('components.nav')
-    <div class="jumbotron">
-        {{-- <div class="container"> --}}
-          <h1 class="display-3">Watch it!</h1>
-          @yield('content')
-        </div>
-      {{-- </div> --}}
-    
-    @include('components.footer')
-
-
-
-
-
+        @include('components.nav')
+        <div class="jumbotron">
+            @yield('content')
+        </div> 
+        @include('components.footer')
     </body>
 </html>
