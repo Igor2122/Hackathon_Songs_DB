@@ -82,7 +82,7 @@ class SongsController extends Controller
         if (!$song){
             $song = new Song;
         }
-        return view('posts/editsong')->with('songid', $song);
+        return view('pages/edit')->with('songInfo', $song);
     }
 
     /**
@@ -94,7 +94,22 @@ class SongsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'author' => 'required',
+            'link' => 'required',
+            'genre' => 'required'
+        ]);
+
+
+        $song = new Song;
+        $song->name = $request->input('name');
+        $song->author = $request->input('author');
+        $song->link = $request->input('link');
+        $song->genre = $request->input('genre');
+        $song->created_at = now();
+        $song->save();
+        return view('pages/expand')->with('song', $song);
     }
 
     /**
