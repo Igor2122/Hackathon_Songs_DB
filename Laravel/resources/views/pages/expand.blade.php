@@ -13,7 +13,7 @@
         </ul>
         <div class="card-body">
           <p class="class-text"><b>Genre :</b>  <a href="#" class="card-link">{{ $song->genre }}</a></p>
-          <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Details</a>
+          
         </div>
       </div>
 
