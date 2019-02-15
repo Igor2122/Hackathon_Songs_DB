@@ -4,10 +4,8 @@
 @endsection
 
 @section('content')
-    {{-- <h1>Hello there</h1> --}}
-        {{-- @php
-            var_dump($data);
-        @endphp --}}
+    <h1>List Of Your Favourite Songs</h1>
+        
     @foreach ($data as $song)
     <div class="card d-flex flex-wrap d-lg-inline-block m-2" style="width: 560px;">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/{!! $song->link !!}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -24,7 +22,6 @@
           <a href="/songs/{{$song->id}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Details</a>
               </div>
         </div>
-      </div>
     @endforeach
 @endsection
 
