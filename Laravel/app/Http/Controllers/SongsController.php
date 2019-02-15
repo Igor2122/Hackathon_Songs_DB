@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use App\Song;
 
 class SongsController extends Controller
 {
@@ -14,8 +15,9 @@ class SongsController extends Controller
      */
     public function index()
     {
-        $query = 'select * from songList';
-        $allSongs = DB::select($query);
+        // $query = 'select * from songList';
+        // $allSongs = DB::select($query);
+        $allSongs = Song::orderBy('created_at')->get();
         return view('pages.index')->with('data', $allSongs);
     }
 

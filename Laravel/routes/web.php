@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', 'SongsController@index');
+
+Route::resource('/', 'SongsController');
 
 
