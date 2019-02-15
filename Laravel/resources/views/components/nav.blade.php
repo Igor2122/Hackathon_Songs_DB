@@ -1,7 +1,7 @@
 @php
     $nav_links = [
       'Home' => '/',
-      'Create New' => '/new_song',
+      'Create New' => '/create',
     ];
 @endphp
 
@@ -14,6 +14,6 @@
       @foreach ($nav_links as $key => $menuItem)
           <a class="py-2 d-none d-md-inline-block" href="{{ $menuItem }}">{{ $key }}</a>}}
       @endforeach
-  
+
     </div>
   </nav>
