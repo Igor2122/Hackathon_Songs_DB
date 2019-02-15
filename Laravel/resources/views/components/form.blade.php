@@ -28,14 +28,10 @@
       </select>
     </div>
 
-    <div class="form-group">
+    {{-- <div class="form-group">
         <label for="created_at">Created at</label>
           <input type="text" class="form-control" name="created_at" id="created_at">
-      </div>
+      </div> --}}
 
-    <div class="form-group">
-      <label for="exampleFormControlTextarea1">Example textarea</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
     <input type="submit" value="Add">
   </form>

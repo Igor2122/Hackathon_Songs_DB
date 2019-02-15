@@ -48,8 +48,13 @@ class SongsController extends Controller
 
         $song = new Song;
         $song->name = $request->input('name');
+        $song->author = $request->input('author');
+        $song->link = $request->input('link');
+        $song->genre = $request->input('genre');
+        $song->created_at = now();
+        $song->save();
 
-        // dd($song);
+        return redirect('/')->with('success', 'Song Created');
 
     }
 
