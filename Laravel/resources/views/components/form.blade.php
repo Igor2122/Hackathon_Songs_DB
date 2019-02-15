@@ -1,9 +1,10 @@
 
 
-<form method="POST">
+<form action="/" method="POST">
+    {{ csrf_field() }}
     <div class="form-group">
       <label for="name">Name</label>
-      <input type="text" class="form-control" id="name">
+      <input type="text" class="form-control" name="name" id="name">
     </div>
 
     <div class="form-group">
@@ -36,4 +37,5 @@
       <label for="exampleFormControlTextarea1">Example textarea</label>
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
+    <input type="submit" value="Add">
   </form>

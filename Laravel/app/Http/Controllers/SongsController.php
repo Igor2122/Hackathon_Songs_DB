@@ -39,7 +39,18 @@ class SongsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'author' => 'required',
+            'link' => 'required',
+            'genre' => 'required'
+        ]);
+
+        $song = new Song;
+        $song->name = $request->input('name');
+
+        // dd($song);
+
     }
 
     /**
