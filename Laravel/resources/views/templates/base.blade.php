@@ -13,9 +13,13 @@
     </head>
     <body>
     @include('components.nav')
-    <div class="conteiner">
-        @yield('content')
-    </div>
+    <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Hello, world!</h1>
+          @yield('content')
+        </div>
+      </div>
+    
     @include('components.footer')
 
 
